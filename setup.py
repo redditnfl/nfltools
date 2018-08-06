@@ -94,7 +94,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'schedule=redditnfl.nfltools.nflcom.schedule:main',
+            'nfl-schedule=redditnfl.nfltools.nflcom.schedule:main',
             ],
     },
     install_requires=REQUIRED,
