@@ -1,2 +1,4 @@
-# nfltools
+nfltools
+========
+
 Various NFL-related stuff
