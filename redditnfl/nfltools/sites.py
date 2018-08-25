@@ -41,6 +41,7 @@ sites = {
         'University of Phoenix Stadium': [MST_NODST, 'United_States/Arizona/Glendale'],
         'Qualcomm Stadium': [PST, 'United_States/California/San_Diego'],
         'StubHub Center': [PST, 'United_States/California/Carson'],
+        'ROKiT Field at StubHub Center': [PST, 'United_States/California/Carson'],
         'Sports Authority Field at Mile High': [MST, 'United_States/Colorado/Denver'],
         'Broncos Stadium at Mile High': [MST, 'United_States/Colorado/Denver'],
         'FedExField': [EST, 'United_States/Maryland/Landover'],

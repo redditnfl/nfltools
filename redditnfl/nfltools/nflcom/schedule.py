@@ -122,8 +122,7 @@ def parse_schedule(data):
         if site in sites:
             tz, place = sites[site]
         else:
-            tz = pytz.timezone('US/Eastern')
-            place = ''
+            raise Exception("Unknown site: " + site)
         if not div['data-localtime']:
             div['data-localtime'] = "20:00:01"
         date_str = eid[0:8] + 'T' + div['data-localtime']
