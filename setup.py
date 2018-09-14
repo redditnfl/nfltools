@@ -9,7 +9,7 @@ import os
 import sys
 from shutil import rmtree
 
-from setuptools import find_packages, setup, Command
+from setuptools import find_namespace_packages, setup, Command
 
 # Package meta-data.
 ORG = 'redditnfl'
@@ -88,7 +88,7 @@ setup(
     author=AUTHOR,
     author_email=EMAIL,
     url=URL,
-    packages=find_packages(exclude=('tests',)),
+    packages=find_namespace_packages(exclude=('tests*', 'build*', 'dist*')),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
 
@@ -105,8 +105,6 @@ setup(
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
