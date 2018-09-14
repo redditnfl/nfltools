@@ -39,6 +39,7 @@ sites = {
         'Paul Brown Stadium': [EST, 'United_States/Ohio/Cincinnati'],
         'U.S. Bank Stadium': [CST, 'United_States/Minnesota/Minneapolis'],
         'University of Phoenix Stadium': [MST_NODST, 'United_States/Arizona/Glendale'],
+        'State Farm Stadium': [MST_NODST, 'United_States/Arizona/Glendale'],
         'Qualcomm Stadium': [PST, 'United_States/California/San_Diego'],
         'StubHub Center': [PST, 'United_States/California/Carson'],
         'ROKiT Field at StubHub Center': [PST, 'United_States/California/Carson'],
