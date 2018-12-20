@@ -15,6 +15,10 @@ WEEK = timedelta(days=7)
 
 # Tuesday of the first week with games in each season. Day after labor day
 STARTDAYS = [
+        date(2010, 9, 7),
+        date(2011, 9, 6),
+        date(2012, 9, 4),
+        date(2013, 9, 3),
         date(2014, 9, 2),
         date(2015, 9, 8),
         date(2016, 9, 6),
