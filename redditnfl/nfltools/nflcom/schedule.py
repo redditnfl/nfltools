@@ -24,6 +24,7 @@ STARTDAYS = [
         date(2016, 9, 6),
         date(2017, 9, 5),
         date(2018, 9, 4),
+        date(2019, 9, 5),
         ]
 
 PRE = 'PRE'
@@ -124,7 +125,7 @@ def parse_schedule(data):
         eid = div['data-gameid']
         site = div['data-site']
         if site in sites:
-            tz, place = sites[site]
+            tz, place, _, _ = sites[site]
         else:
             raise Exception("Unknown site: " + site)
         if not div['data-localtime']:

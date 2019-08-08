@@ -48,6 +48,7 @@ sites = {
         'Broncos Stadium at Mile High': [MST, 'United_States/Colorado/Denver', ['DEN'], (39.743889,-105.02)],
         'FedExField': [EST, 'United_States/Maryland/Landover', ['WAS'], (38.907778,-76.864444)],
         'Oakland Coliseum': [PST, 'United_States/California/Oakland', ['OAK'], (37.751667,-122.200556)],
+        'Oakland-Alameda County Coliseum': [PST, 'United_States/California/Oakland', ['OAK'], (37.751667,-122.200556)],
         'Mercedes-Benz Superdome': [CST, 'United_States/Louisiana/New_Orleans', ['NO'], (29.950833,-90.081111)],
         'Heinz Field': [EST, 'United_States/Pennsylvania/Pittsburgh', ['PIT'], (40.446667,-80.015833)],
 
