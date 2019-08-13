@@ -9,7 +9,7 @@ from collections import namedtuple
 import requests
 import pytz
 from ..nflteams import get_team
-from ..sites import sites
+from .. import sites
 
 WEEK = timedelta(days=7)
 
@@ -24,7 +24,7 @@ STARTDAYS = [
         date(2016, 9, 6),
         date(2017, 9, 5),
         date(2018, 9, 4),
-        date(2019, 9, 5),
+        date(2019, 9, 3),
         ]
 
 PRE = 'PRE'
@@ -77,6 +77,8 @@ def get_week(for_date):
     (None, None, None)
     >>> get_week(date(2017, 10, 26))
     (2017, 'REG', 8)
+    >>> get_week(date(2019, 8, 13))
+    (2019, 'PRE', 2)
 
     """
     start = None
@@ -123,9 +125,10 @@ def parse_schedule(data):
     # Grabs most info
     for div in soup.find_all("div", class_="schedules-list-content"):
         eid = div['data-gameid']
-        site = div['data-site']
-        if site in sites:
-            tz, place, _, _ = sites[site]
+        site_name = div['data-site']
+        _, site = sites.by_name(site_name)
+        if site:
+            tz, place, _, _ = site
         else:
             raise Exception("Unknown site: " + site)
         if not div['data-localtime']:
@@ -152,9 +155,12 @@ def get_schedule(season, game_type, week):
 
 def main():
     import doctest
+    from . import schedule as mod
+    doctest.testmod(mod)
+
     import sys
     from tzlocal import get_localzone
-    doctest.testmod()
+
     local = get_localzone()
     if len(sys.argv) == 4:
         schedule = get_schedule(*sys.argv[1:])
@@ -162,5 +168,5 @@ def main():
         now = get_week(datetime.now().date())
         print("Schedule for {0} {1} {2}".format(*now))
         schedule = get_schedule(*now)
-    for game in schedule:
+    for game in sorted(schedule, key=lambda g: g.date):
         print("{t:%Y-%m-%d %H:%M}  {g.away[short]:>3} @ {g.home[short]:3}".format(g=game, t=game.date.astimezone(local)))
