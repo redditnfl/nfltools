@@ -46,7 +46,8 @@ sites = {
         'ROKiT Field at Dignity Health Sports Park': [PST, 'United_States/California/Carson', ['LAC'], (33.864,-118.261)],
         'ROKiT Field at StubHub Center': [PST, 'United_States/California/Carson', [], (33.864,-118.261)],
         'Sports Authority Field at Mile High': [MST, 'United_States/Colorado/Denver', [], (39.743889,-105.02)],
-        'Broncos Stadium at Mile High': [MST, 'United_States/Colorado/Denver', ['DEN'], (39.743889,-105.02)],
+        'Broncos Stadium at Mile High': [MST, 'United_States/Colorado/Denver', [], (39.743889,-105.02)],
+        'Empower Field at Mile High': [MST, 'United_States/Colorado/Denver', ['DEN'], (39.743889,-105.02)],
         'FedExField': [EST, 'United_States/Maryland/Landover', ['WAS'], (38.907778,-76.864444)],
         'Oakland Coliseum': [PST, 'United_States/California/Oakland', ['OAK'], (37.751667,-122.200556)],
         'Oakland-Alameda County Coliseum': [PST, 'United_States/California/Oakland', ['OAK'], (37.751667,-122.200556)],
@@ -69,6 +70,7 @@ def by_name(lookup_name):
     for name, data in sites.items():
         if name == lookup_name:
             return (name, data)
+    raise Exception("Unknown site: %s" % lookup_name)
 
 
 def by_team(lookup_team):
@@ -77,6 +79,7 @@ def by_team(lookup_team):
     for name, data in sites.items():
         if lookup_team in data[2]:
             return (name, data)
+    raise Exception("Unknown team: %s" % lookup_team)
 
 
 def main():
