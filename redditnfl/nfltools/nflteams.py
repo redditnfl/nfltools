@@ -177,7 +177,7 @@ twitter = {
         'SF': '49ers',
         'SEA': 'Seahawks',
         'LA': 'RamsNFL',
-        'TB': 'TBBuccaneers',
+        'TB': 'Buccaneers',
         'TEN': 'Titans',
         'WAS': 'Redskins',
         'AFC': '',
