@@ -235,7 +235,7 @@ colors = {
                  (u'White ', u'#FFFFFF')],
          
          },
- 'DET': {'all': [(u'Honolulu Blue', u'#005A8B'),
+ 'DET': {'all': [(u'Honolulu Blue', u'#0076B6'),
                  (u'Silver', u'#B0B7BC'),
                  (u'Black', u'#000000'),
                  (u'White', u'#FFFFFF')],
@@ -375,6 +375,7 @@ for team in list(mascots.keys()):
             'city': cities[team],
             'subreddit': subreddits[team],
             'twitter': twitter[team],
+            'colors': colors[team],
             }
 
 def fix_team(team):
