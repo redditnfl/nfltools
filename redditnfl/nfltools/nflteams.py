@@ -32,7 +32,7 @@ subreddits = {
         'LA':  '/r/losangelesrams',
         'TB':  '/r/buccaneers',
         'TEN': '/r/tennesseetitans',
-        'WAS': '/r/washingtonnfl',
+        'WAS': '/r/commanders',
 
         'AFC': '/AFC',
         'NFC': '/NFC',
@@ -69,7 +69,7 @@ fullnames = {
         'LA': 'Los Angeles Rams',
         'TB': 'Tampa Bay Buccaneers',
         'TEN': 'Tennessee Titans',
-        'WAS': 'Washington Football Team',
+        'WAS': 'Washington Commanders',
 
         'AFC': 'AFC Pro Bowl Team',
         'NFC': 'NFC Pro Bowl Team',
@@ -142,7 +142,7 @@ mascots = {
         'LA': 'Rams',
         'TB': 'Buccaneers',
         'TEN': 'Titans',
-        'WAS': 'Football Team',
+        'WAS': 'Commanders',
         'AFC': 'AFC',
         'NFC': 'NFC',
         }
@@ -179,7 +179,7 @@ twitter = {
         'LA': 'RamsNFL',
         'TB': 'Buccaneers',
         'TEN': 'Titans',
-        'WAS': 'WashingtonNFL',
+        'WAS': 'commanders',
         'AFC': '',
         'NFC': '',
         }
